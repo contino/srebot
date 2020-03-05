@@ -1,0 +1,17 @@
+[
+  {
+    "value": "env",
+    "synonyms": [
+      "env",
+      "qa",
+      "prod",
+      "idev",
+      "dev",
+      "idev2",
+      "qa2",
+      "uat",
+      "stage",
+      "environment"
+    ]
+  }
+]

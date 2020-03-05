@@ -1,0 +1,17 @@
+[
+  {
+    "value": "myapp",
+    "synonyms": [
+      "myapp",
+      "myapp application",
+      "the application"
+    ]
+  },
+  {
+    "value": "Spanner",
+    "synonyms": [
+      "Spanner",
+      "spanner"
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "id": "6e868b8c-53b4-4839-a5d8-6460624eebbb",
+  "parentId": "382b213a-ea0e-44b2-8edf-921edff009cd",
+  "rootParentId": "382b213a-ea0e-44b2-8edf-921edff009cd",
+  "name": "scheduled.deployments-prod",
+  "auto": true,
+  "contexts": [
+    "scheduleddeployments-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "scheduleddeployments.scheduleddeployments-custom",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "ee4fdd67-4722-4063-ae56-0f8fe73ed435",
+          "required": false,
+          "dataType": "@env",
+          "name": "env",
+          "value": "$env",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "3b974691-6cba-4a6d-8723-d37601588fad",
+          "required": false,
+          "dataType": "@name",
+          "name": "name",
+          "value": "$name",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

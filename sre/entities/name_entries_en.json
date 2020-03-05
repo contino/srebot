@@ -1,0 +1,57 @@
+[
+  {
+    "value": "Cassandra",
+    "synonyms": [
+      "Cassandra",
+      "cassandra",
+      "cass"
+    ]
+  },
+  {
+    "value": "Kafka",
+    "synonyms": [
+      "Kafka",
+      "kafka",
+      "kaf"
+    ]
+  },
+  {
+    "value": "Docker",
+    "synonyms": [
+      "Docker",
+      "docker",
+      "doc"
+    ]
+  },
+  {
+    "value": "app",
+    "synonyms": [
+      "myapp",
+      "MYAPP"
+    ]
+  },
+  {
+    "value": "Microservice",
+    "synonyms": [
+      "Microservice",
+      "micro",
+      "microservice"
+    ]
+  },
+  {
+    "value": "Batch",
+    "synonyms": [
+      "Batch",
+      "batch",
+      "spring batch"
+    ]
+  },
+  {
+    "value": "Spanner",
+    "synonyms": [
+      "Spanner",
+      "spanner",
+      "google spanner"
+    ]
+  }
+]

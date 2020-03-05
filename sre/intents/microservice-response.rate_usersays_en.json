@@ -1,0 +1,78 @@
+[
+  {
+    "id": "cf974942-4022-4729-bdb7-d0fc8598f52d",
+    "data": [
+      {
+        "text": "what is the ",
+        "userDefined": false
+      },
+      {
+        "text": "chairside",
+        "alias": "name",
+        "meta": "@name",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "response",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "time",
+        "alias": "rate",
+        "meta": "@rate",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7b06a634-dc3b-4ccc-8645-d5e995ce9a86",
+    "data": [
+      {
+        "text": "what is the ",
+        "userDefined": false
+      },
+      {
+        "text": "microservice",
+        "alias": "name",
+        "meta": "@name",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "response",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "rate",
+        "alias": "rate",
+        "meta": "@rate",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "id": "08dc8d5e-7cfb-42e3-abef-d166fd3e68d2",
+  "name": "microservice",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

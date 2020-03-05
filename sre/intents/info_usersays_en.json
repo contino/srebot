@@ -1,0 +1,116 @@
+[
+  {
+    "id": "1c57ae02-79e7-41cf-8b23-6301b9e1c829",
+    "data": [
+      {
+        "text": "help",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "48c9cc6e-8256-4559-856c-8e4cec0a85eb",
+    "data": [
+      {
+        "text": "info",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9737cbc6-7583-49c9-80fa-3712a784dccc",
+    "data": [
+      {
+        "text": "can you ",
+        "userDefined": false
+      },
+      {
+        "text": "give",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      },
+      {
+        "text": " me ",
+        "userDefined": false
+      },
+      {
+        "text": "instructions",
+        "alias": "name",
+        "meta": "@name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1e9e5b52-11cd-4776-afa2-5ef55310946d",
+    "data": [
+      {
+        "text": "describe",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      },
+      {
+        "text": " your ",
+        "userDefined": false
+      },
+      {
+        "text": "functionality",
+        "alias": "name",
+        "meta": "@name",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "70f5ffc8-27d2-4582-93ea-c3d5103ce21e",
+    "data": [
+      {
+        "text": "what can you ",
+        "userDefined": false
+      },
+      {
+        "text": "do",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f8ca477f-2204-4668-aab0-129944c69e8e",
+    "data": [
+      {
+        "text": "how do you ",
+        "userDefined": false
+      },
+      {
+        "text": "work",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "id": "a63ad953-03d2-4a4b-b489-ae9107de2ea0",
+  "name": "info",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "7df01ffe-16e6-478b-b3d7-91e1ff0a4886",
+          "required": false,
+          "dataType": "@action",
+          "name": "action",
+          "value": "$action",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "2cacee87-9fc3-4e10-9e3c-be29a076ded7",
+          "required": false,
+          "dataType": "@name",
+          "name": "name",
+          "value": "$name",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "platform": "hangouts",
+          "lang": "en",
+          "condition": "",
+          "speech": "These are the things I can do...\n\n*Alerts from Grafana*\nThis can be invoked by asking *@SREBot is myapp Up/Down?*\nThis can also be invoked by asking *@SREBot show me the status of myapp*\n\nI can also pass *Alerts* from *Prometheus Alert Manager*\nThis is invoked by simply saying *SREBot prometheus*\n\n*BODE/Deployment Information*\nI can relay scheduled deployment information by asking *@SREBot can you show me scheduled deployments?*\nI will then respond back asking *for what environment?*\nDepending on the environment you will need respond the you will have to respond with *@SREBot PROD/IDEV/QA/etc*\n\n*Microservice responses per second*\nI can relay microservice responses per second metrics by asking *@SREot what is the microservice response rate?*\n\n*Micoservice error rate*\nI can relay microservice error rate per second by asking *@SREBot what is the error rate?*"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "hangouts": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

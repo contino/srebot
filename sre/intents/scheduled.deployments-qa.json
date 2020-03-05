@@ -1,0 +1,54 @@
+{
+  "id": "8df718ca-02b6-44fd-a8d4-894a0df32abf",
+  "parentId": "382b213a-ea0e-44b2-8edf-921edff009cd",
+  "rootParentId": "382b213a-ea0e-44b2-8edf-921edff009cd",
+  "name": "scheduled.deployments-qa",
+  "auto": true,
+  "contexts": [
+    "scheduleddeployments-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "scheduleddeployments.scheduleddeployments-custom",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "929f4977-ce0d-474d-8b1c-cc75ea6c6ded",
+          "required": false,
+          "dataType": "@env",
+          "name": "env",
+          "value": "$env",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "2c2588cf-5529-4112-bc9f-804c62208560",
+          "required": false,
+          "dataType": "@name",
+          "name": "name",
+          "value": "$name",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

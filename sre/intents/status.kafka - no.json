@@ -1,0 +1,36 @@
+{
+  "id": "244950c8-a3a4-4504-ab61-7bd2d48e3c69",
+  "parentId": "eddef46a-59c4-4d53-8897-3d36d450a25c",
+  "rootParentId": "eddef46a-59c4-4d53-8897-3d36d450a25c",
+  "name": "status.kafka - no",
+  "auto": true,
+  "contexts": [
+    "statuskafka-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "statuskafka.statuskafka-no",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
