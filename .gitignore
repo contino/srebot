@@ -2,3 +2,4 @@ account.json
 *.zip
 *.tfstate
 *.tfstate.backup
+.terraform/
