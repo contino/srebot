@@ -1,16 +1,15 @@
 data "google_project" "agent_project" {
 }
 
-data "archive_file" "bot_zip" {
-  type        = "zip"
-  source_dir  = "${path.module}/${var.bot_name}"
-  output_path = "${path.module}/${var.bot_name}.zip"
+locals {
+  zip_filename = "${var.bot_name}.zip"
 }
 
-data "template_file" "import_request" {
-  template = "{ \"agentContent\": \"$${zip_content}\" }"
+resource template_dir "bot_dir" {
+  source_dir  = "${path.module}/${var.bot_name}_template"
+  destination_dir = "${path.module}/${var.bot_name}"
   vars = {
-    zip_content = "${filebase64(data.archive_file.bot_zip.output_path)}"
+    webhook_url = "https://jira-hangouts-XXXX5.cloudfunctions.net/srebot/dialogflow"
   }
 }
 
@@ -51,8 +50,11 @@ resource "null_resource" "import" {
     always_run = "${timestamp()}"
   }
   provisioner "local-exec" {
-    #command = "export GOOGLE_APPLICATION_CREDENTIALS=account.json | curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/bhood-214523/agent:import --data '{ \"agentUri\": \"gs://${data.google_project.agent_project.project_id}.appspot.com/CWOWBot.zip\" }'"
-    command = "export GOOGLE_APPLICATION_CREDENTIALS=account.json | curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/${data.google_project.agent_project.project_id}/agent:import --data '${data.template_file.import_request.rendered}'"
+    #command = "curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/bhood-214523/agent:import --data '{ \"agentUri\": \"gs://${data.google_project.agent_project.project_id}.appspot.com/CWOWBot.zip\" }'"
+    #command = "curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/${data.google_project.agent_project.project_id}/agent:import --data '${data.template_file.import_request.rendered}'"
+    #command = "curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/${data.google_project.agent_project.project_id}/agent:import --data '{ \"agentContent\": \"${filebase64(data.archive_file.bot_zip.output_path}\" }'"
+    
+    command = "rm -f ${local.zip_filename};cd ${var.bot_name};zip -r ../${local.zip_filename} .;cd .. ;curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/${data.google_project.agent_project.project_id}/agent:import --data '{ \"agentContent\": \"${filebase64(local.zip_filename)}\"}'"
   }
   depends_on = [google_dialogflow_agent.full_agent]
 }
