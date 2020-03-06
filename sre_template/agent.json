@@ -37,7 +37,7 @@
   },
   "defaultTimezone": "America/Chicago",
   "webhook": {
-    "url": "https://jira-hangouts-XXXX5.cloudfunctions.net/srebot/dialogflow",
+    "url": "${webhook_url}",
     "username": "",
     "headers": {
       "": ""
