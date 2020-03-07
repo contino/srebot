@@ -8,16 +8,15 @@
     "smalltalk-domain-on"
   ],
   "disableInteractionLogs": false,
-  "disableStackdriverLogs": false,
+  "disableStackdriverLogs": true,
   "googleAssistant": {
-    "googleAssistantCompatible": true,
+    "googleAssistantCompatible": false,
     "project": "",
     "welcomeIntentSignInRequired": false,
     "startIntents": [],
     "systemIntents": [],
     "endIntentIds": [
-      "a63ad953-03d2-4a4b-b489-ae9107de2ea0",
-      "eddef46a-59c4-4d53-8897-3d36d450a25c"
+      "a63ad953-03d2-4a4b-b489-ae9107de2ea0"
     ],
     "oAuthLinking": {
       "required": false,
@@ -42,15 +41,18 @@
     "headers": {
       "": ""
     },
-    "available": true,
+    "available": false,
     "useForDomains": false,
     "cloudFunctionsEnabled": false,
-    "cloudFunctionsInitialized": true
+    "cloudFunctionsInitialized": false
   },
   "isPrivate": true,
   "customClassifierMode": "use.after",
   "mlMinConfidence": 0.3,
-  "supportedLanguages": [],
+  "supportedLanguages": [
+    "fr",
+    "es"
+  ],
   "onePlatformApiVersion": "v2beta1",
   "analyzeQueryTextSentiment": false,
   "enabledKnowledgeBaseNames": [],

@@ -1,0 +1,45 @@
+{
+  "id": "382b213a-ea0e-44b2-8edf-921edff009cd",
+  "name": "deployments",
+  "auto": true,
+  "contexts": [
+    "environment"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "environment",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "2eb63d7d-d18d-47b0-a6ba-9cf5100e0791",
+          "required": false,
+          "dataType": "@action",
+          "name": "action",
+          "value": "$action",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

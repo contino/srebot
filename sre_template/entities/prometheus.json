@@ -1,9 +1,0 @@
-{
-  "id": "bbbba04e-4573-4ded-8703-3396ff8d0190",
-  "name": "prometheus",
-  "isOverridable": true,
-  "isEnum": false,
-  "isRegexp": false,
-  "automatedExpansion": false,
-  "allowFuzzyExtraction": false
-}

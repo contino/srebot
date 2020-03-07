@@ -1,9 +1,0 @@
-{
-  "id": "5a4b3280-c2d8-49ce-ae57-6d6bca1debda",
-  "name": "DockerDataCenter",
-  "isOverridable": true,
-  "isEnum": false,
-  "isRegexp": false,
-  "automatedExpansion": false,
-  "allowFuzzyExtraction": false
-}

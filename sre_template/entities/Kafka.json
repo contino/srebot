@@ -1,9 +1,0 @@
-{
-  "id": "50a35b4c-b4e6-46d8-ab78-7f98663a96aa",
-  "name": "Kafka",
-  "isOverridable": true,
-  "isEnum": false,
-  "isRegexp": false,
-  "automatedExpansion": false,
-  "allowFuzzyExtraction": false
-}

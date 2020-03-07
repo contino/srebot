@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ccb75aa7-ba59-4dfb-8653-f7c441aca32b",
+    "data": [
+      {
+        "text": "show me the kafka errors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d249883e-c0fc-47c6-b19a-74a2c4b295f1",
+    "data": [
+      {
+        "text": "show me the cassandra errors",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

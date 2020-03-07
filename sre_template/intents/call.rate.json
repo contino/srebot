@@ -1,0 +1,45 @@
+{
+  "id": "401b2bcc-782d-4340-91eb-b61d8d30ee80",
+  "name": "call.rate",
+  "auto": true,
+  "contexts": [
+    "environment",
+    "service"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "environment",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "service",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

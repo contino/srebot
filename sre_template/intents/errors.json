@@ -1,0 +1,45 @@
+{
+  "id": "0a7742d3-d45d-4466-b6cf-31120b4fd8ed",
+  "name": "errors",
+  "auto": true,
+  "contexts": [
+    "environment",
+    "service"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "environment",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "service",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

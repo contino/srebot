@@ -1,0 +1,9 @@
+{
+  "id": "90bdba69-b71e-4498-b9ef-3b1e2e6616d8",
+  "name": "environment",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

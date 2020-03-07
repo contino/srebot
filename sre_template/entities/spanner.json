@@ -1,9 +1,0 @@
-{
-  "id": "c0326951-5197-45a1-9247-37c214fb7f7a",
-  "name": "spanner",
-  "isOverridable": true,
-  "isEnum": false,
-  "isRegexp": false,
-  "automatedExpansion": false,
-  "allowFuzzyExtraction": false
-}

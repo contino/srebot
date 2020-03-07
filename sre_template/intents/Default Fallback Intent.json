@@ -1,5 +1,5 @@
 {
-  "id": "498cf54d-a381-4fc3-8314-f9d81a77273c",
+  "id": "6dd5e0fd-34e9-44a8-bf34-664d9680a6d8",
   "name": "Default Fallback Intent",
   "auto": true,
   "contexts": [],
@@ -10,6 +10,30 @@
       "affectedContexts": [],
       "parameters": [],
       "messages": [
+        {
+          "type": 0,
+          "lang": "es",
+          "condition": "",
+          "speech": [
+            "Ups, no he entendido a que te refieres.",
+            "¿Podrías repetirlo, por favor?",
+            "¿Disculpa?",
+            "¿Decías?",
+            "¿Cómo?"
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "fr",
+          "condition": "",
+          "speech": [
+            "J\u0027ai du mal à comprendre cette question.",
+            "J\u0027ai mal compris votre demande.",
+            "Je n\u0027ai pas saisi ce que vous avez dit.",
+            "Je crois que je ne vous suis pas.",
+            "Je ne comprends pas de quoi vous me parlez."
+          ]
+        },
         {
           "type": 0,
           "lang": "en",

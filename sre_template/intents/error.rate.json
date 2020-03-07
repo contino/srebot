@@ -1,0 +1,45 @@
+{
+  "id": "5336d8a9-3744-4b41-bae9-fe01210082b3",
+  "name": "error.rate",
+  "auto": true,
+  "contexts": [
+    "environment",
+    "service"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "environment",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "service",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

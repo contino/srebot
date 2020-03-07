@@ -1,5 +1,5 @@
 {
-  "id": "f1bdf535-f4ad-46ae-9099-2dc5913ad039",
+  "id": "b428c0a5-b110-4d8e-947e-3771c7592246",
   "name": "Default Welcome Intent",
   "auto": true,
   "contexts": [],
@@ -10,6 +10,27 @@
       "affectedContexts": [],
       "parameters": [],
       "messages": [
+        {
+          "type": 0,
+          "lang": "es",
+          "condition": "",
+          "speech": [
+            "¡Hola!",
+            "¡Hey!",
+            "¡Buenos días!"
+          ]
+        },
+        {
+          "type": 0,
+          "lang": "fr",
+          "condition": "",
+          "speech": [
+            "Salut !",
+            "Bonjour !",
+            "Salutations !",
+            "Bienvenue !"
+          ]
+        },
         {
           "type": 0,
           "lang": "en",
