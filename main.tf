@@ -9,7 +9,7 @@ resource template_dir "bot_dir" {
   source_dir  = "${path.module}/${var.bot_name}_template"
   destination_dir = "${path.module}/${var.bot_name}"
   vars = {
-    webhook_url = "https://jira-hangouts-XXXX5.cloudfunctions.net/srebot/dialogflow"
+    webhook_url = "https://us-central1-bhood-214523.cloudfunctions.net/dialogflowFirebaseFulfillment"
   }
 }
 

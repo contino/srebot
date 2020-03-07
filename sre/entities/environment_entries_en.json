@@ -1,0 +1,43 @@
+[
+  {
+    "value": "dev",
+    "synonyms": [
+      "dev",
+      "development"
+    ]
+  },
+  {
+    "value": "int",
+    "synonyms": [
+      "int",
+      "idev",
+      "integration"
+    ]
+  },
+  {
+    "value": "qa",
+    "synonyms": [
+      "qa"
+    ]
+  },
+  {
+    "value": "uat",
+    "synonyms": [
+      "uat"
+    ]
+  },
+  {
+    "value": "stage",
+    "synonyms": [
+      "stage",
+      "staging"
+    ]
+  },
+  {
+    "value": "prod",
+    "synonyms": [
+      "prod",
+      "production"
+    ]
+  }
+]

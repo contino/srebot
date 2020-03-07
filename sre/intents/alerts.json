@@ -1,0 +1,58 @@
+{
+  "id": "ba96f3bf-56a8-47b6-be99-7f7bed869523",
+  "name": "alerts",
+  "auto": true,
+  "contexts": [
+    "environment",
+    "service"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "environment",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "service",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "fa7894cd-2179-4211-b67f-b7f30d5d68c8",
+          "required": false,
+          "dataType": "@Health",
+          "name": "health",
+          "value": "$health",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

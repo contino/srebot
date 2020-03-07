@@ -1,0 +1,20 @@
+[
+  {
+    "value": "health of myapp",
+    "synonyms": [
+      "health of myapp"
+    ]
+  },
+  {
+    "value": "myapp down",
+    "synonyms": [
+      "myapp down"
+    ]
+  },
+  {
+    "value": "myapp up",
+    "synonyms": [
+      "myapp up"
+    ]
+  }
+]

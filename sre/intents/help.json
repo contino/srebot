@@ -1,0 +1,47 @@
+{
+  "id": "a63ad953-03d2-4a4b-b489-ae9107de2ea0",
+  "name": "help",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "7df01ffe-16e6-478b-b3d7-91e1ff0a4886",
+          "required": false,
+          "dataType": "@action",
+          "name": "action",
+          "value": "$action",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "platform": "hangouts",
+          "lang": "en",
+          "condition": "",
+          "speech": "These are the things I can do for various environments:.\n.\n*On Call*\nThis can be invoked by asking *Who is on call?*\n\n*Deployments*\nI can relay scheduled deployment information by asking \"Can you show me scheduled deployments?*\nI can relay deployment history by asking \"What deployments have happened?*\nI can relay current deployment by asking \"What deployments are happening now?*\n\n*Health*\nThis can get a health summary by asking *Show me the status*\nYou can also ask about health of a service or component *Show me the kafka status* or *Is kafka Up/Down?*\n\n*Alerts*\nThis is invoked by simply saying *show me the alerts for kafka*\n\n*call rate*\nI can relay operations per second for services by asking *What is the orders call rate?* or *What is the Cassandra response rate?\n\n*call latency*\nI can get call latency for services by asking *What is the orders call latency?* or “Is Cassandra slow?\n\n*error rate*\nI can relay service error rate per second by asking *What is the orders error rate?*"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "hangouts": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

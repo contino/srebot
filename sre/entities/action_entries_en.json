@@ -1,0 +1,16 @@
+[
+  {
+    "value": "action",
+    "synonyms": [
+      "action",
+      "response",
+      "error",
+      "migrate",
+      "migration",
+      "move",
+      "copy",
+      "upload",
+      "export"
+    ]
+  }
+]

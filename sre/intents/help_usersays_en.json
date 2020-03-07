@@ -1,0 +1,126 @@
+[
+  {
+    "id": "4e5bb3c7-94ea-4896-b9b5-4e1f4318ddf7",
+    "data": [
+      {
+        "text": "man",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "951d99b0-bf23-4df3-9c60-3e166cc8937e",
+    "data": [
+      {
+        "text": "help",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1d76ee4a-e95d-481e-b2e3-cc4970ab99a0",
+    "data": [
+      {
+        "text": "info",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ad76789d-5445-4092-8bb6-5f88ac1eb57f",
+    "data": [
+      {
+        "text": "can you ",
+        "userDefined": false
+      },
+      {
+        "text": "give",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      },
+      {
+        "text": " me ",
+        "userDefined": false
+      },
+      {
+        "text": "instructions",
+        "meta": "@sys.ignore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ec41825e-0fed-453c-b1b7-de6086a533e4",
+    "data": [
+      {
+        "text": "describe",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      },
+      {
+        "text": " your ",
+        "userDefined": false
+      },
+      {
+        "text": "functionality",
+        "meta": "@sys.ignore",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a243c734-133c-4510-a479-35eac5b7fc74",
+    "data": [
+      {
+        "text": "what can you ",
+        "userDefined": false
+      },
+      {
+        "text": "do",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "79860778-f453-486a-ae94-e166adfa38d1",
+    "data": [
+      {
+        "text": "how do you ",
+        "userDefined": false
+      },
+      {
+        "text": "work",
+        "alias": "action",
+        "meta": "@action",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
