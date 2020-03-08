@@ -1,8 +1,50 @@
+# enable the following: firebase, dialogflow, cloud functions
 data "google_project" "agent_project" {
 }
 
 locals {
   zip_filename = "${var.bot_name}.zip"
+}
+
+resource "google_storage_bucket" "cf_bucket" {
+  name = "${var.bot_name}_bu"
+  project = data.google_project.agent_project.project_id
+  bucket_policy_only = "true"
+}
+
+data "archive_file" "zip" {
+  type        = "zip"
+  source_dir = "../${path.module}/${var.source_dir}/"
+  output_path = "${path.module}/files/index.zip"
+}
+
+resource "google_storage_bucket_object" "cf_archive" {
+  name   = "${var.bot_name}/index.zip"
+  bucket = google_storage_bucket.cf_bucket.name
+  source = data.archive_file.zip.output_path
+}
+
+resource "google_cloudfunctions_function" "cloud_function" {
+  name                  = var.bot_name
+  description           = var.description
+  runtime               = var.runtime
+  project               = data.google_project.agent_project.project_id
+  available_memory_mb   = var.memory_size_mb
+  source_archive_bucket = google_storage_bucket.cf_bucket.name
+  source_archive_object = google_storage_bucket_object.archive.name
+  trigger_http          = true
+  timeout               = var.timeout
+  entry_point           = var.entry_point
+  region                = var.location
+}
+
+resource "google_cloudfunctions_function_iam_member" "invoker" {
+  project        = var.project
+  cloud_function = google_cloudfunctions_function.cloud_function.name
+  region         = google_cloudfunctions_function.cloud_function.region
+  role   = "roles/cloudfunctions.invoker"
+  member = google_project_iam_member.agent_create.member
+  depends_on = [google_project_iam_member.agent_create]
 }
 
 resource template_dir "bot_dir" {
