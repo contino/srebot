@@ -1,8 +1,50 @@
+# enable the following: firebase, dialogflow, cloud functions
 data "google_project" "agent_project" {
 }
 
 locals {
   zip_filename = "${var.bot_name}.zip"
+}
+
+resource "google_storage_bucket" "cf_bucket" {
+  name = "${var.bot_name}_bu"
+  project = data.google_project.agent_project.project_id
+  bucket_policy_only = "true"
+}
+
+data "archive_file" "zip" {
+  type        = "zip"
+  source_dir = "../${path.module}/fulfillment/"
+  output_path = "${path.module}/files/index.zip"
+}
+
+resource "google_storage_bucket_object" "cf_archive" {
+  name   = "${var.bot_name}/index.zip"
+  bucket = google_storage_bucket.cf_bucket.name
+  source = data.archive_file.zip.output_path
+}
+
+resource "google_cloudfunctions_function" "cloud_function" {
+  name                  = var.bot_name
+  description           = var.description
+  runtime               = var.cf_runtime
+  project               = data.google_project.agent_project.project_id
+  available_memory_mb   = var.cf_memory_size_mb
+  source_archive_bucket = google_storage_bucket.cf_bucket.name
+  source_archive_object = google_storage_bucket_object.archive.name
+  trigger_http          = true
+  timeout               = var.cf_timeout
+  entry_point           = var.cf_entry_point
+  region                = var.cf_location
+}
+
+resource "google_cloudfunctions_function_iam_member" "invoker" {
+  project        = var.project
+  cloud_function = google_cloudfunctions_function.cloud_function.name
+  region         = google_cloudfunctions_function.cloud_function.region
+  role   = "roles/cloudfunctions.invoker"
+  member = google_project_iam_member.agent_create.member
+  depends_on = [google_project_iam_member.agent_create]
 }
 
 resource template_dir "bot_dir" {
@@ -31,17 +73,13 @@ resource "google_dialogflow_agent" "full_agent" {
   default_language_code = "en"
   supported_language_codes = ["fr","es"]
   time_zone = "America/Chicago"
-  description = "This is the ${var.bot_name} chat bot."
-  avatar_uri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"
+  description = var.description
+  avatar_uri = var.bot_avatar_uri
   enable_logging = true
-  match_mode = "MATCH_MODE_ML_ONLY"
-  classification_threshold = 0.3
-  api_version = "API_VERSION_V2_BETA_1"
-  tier = "TIER_STANDARD"
-  #match_mode = "MATCH_MODE_HYBRID"
-  #classification_threshold = 0.7
-  #api_version = "API_VERSION_V2"
-  #tier = "TIER_ENTERPRISE"
+  match_mode = var.bot_match_mode
+  classification_threshold = var.bot_classification_threshold
+  api_version = var.bot_api_version
+  tier = ar.bot_tier
   depends_on = [google_project_iam_member.agent_create]
 }
 
