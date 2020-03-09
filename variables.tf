@@ -73,8 +73,7 @@ variable "description" {
 variable "location" {
   type        = string
   description = "Location (region or zone) for resources"
-  default     = ""us-east1" 
-  #default     = "us-central1"
+  default     = "us-east1" 
 }
 
 variable "project" {

@@ -14,7 +14,7 @@ resource "google_storage_bucket" "cf_bucket" {
 
 data "archive_file" "zip" {
   type        = "zip"
-  source_dir = "../${path.module}/fulfillment/"
+  source_dir = "${path.module}/fulfillment/"
   output_path = "${path.module}/files/index.zip"
 }
 
@@ -31,11 +31,11 @@ resource "google_cloudfunctions_function" "cloud_function" {
   project               = data.google_project.agent_project.project_id
   available_memory_mb   = var.cf_memory_size_mb
   source_archive_bucket = google_storage_bucket.cf_bucket.name
-  source_archive_object = google_storage_bucket_object.archive.name
+  source_archive_object = google_storage_bucket_object.cf_archive.name
   trigger_http          = true
   timeout               = var.cf_timeout
   entry_point           = var.cf_entry_point
-  region                = var.cf_location
+  region                = var.location
 }
 
 resource "google_cloudfunctions_function_iam_member" "invoker" {
@@ -51,7 +51,15 @@ resource template_dir "bot_dir" {
   source_dir  = "${path.module}/${var.bot_name}_template"
   destination_dir = "${path.module}/${var.bot_name}"
   vars = {
-    webhook_url = "https://us-central1-bhood-214523.cloudfunctions.net/dialogflowFirebaseFulfillment"
+    #webhook_url = "https://us-central1-bhood-214523.cloudfunctions.net/dialogflowFirebaseFulfillment"
+    webhook_url = google_cloudfunctions_function.cloud_function.https_trigger_url
+  }
+  provisioner "local-exec" {
+    command = <<EOT
+    rm -f ${local.zip_filename}
+    cd ${var.bot_name}
+    zip -r ../${local.zip_filename} * 
+    EOT
   }
 }
 
@@ -79,7 +87,7 @@ resource "google_dialogflow_agent" "full_agent" {
   match_mode = var.bot_match_mode
   classification_threshold = var.bot_classification_threshold
   api_version = var.bot_api_version
-  tier = ar.bot_tier
+  tier = var.bot_tier
   depends_on = [google_project_iam_member.agent_create]
 }
 
@@ -91,8 +99,7 @@ resource "null_resource" "import" {
     #command = "curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/bhood-214523/agent:import --data '{ \"agentUri\": \"gs://${data.google_project.agent_project.project_id}.appspot.com/CWOWBot.zip\" }'"
     #command = "curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/${data.google_project.agent_project.project_id}/agent:import --data '${data.template_file.import_request.rendered}'"
     #command = "curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/${data.google_project.agent_project.project_id}/agent:import --data '{ \"agentContent\": \"${filebase64(data.archive_file.bot_zip.output_path}\" }'"
-    
-    command = "rm -f ${local.zip_filename};cd ${var.bot_name};zip -r ../${local.zip_filename} .;cd .. ;curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/${data.google_project.agent_project.project_id}/agent:import --data '{ \"agentContent\": \"${filebase64(local.zip_filename)}\"}'"
+    command = "curl -X POST -H \"Authorization: Bearer \"$(gcloud auth application-default print-access-token) -H \"Content-Type: application/json; charset=utf-8\" https://dialogflow.googleapis.com/v2/projects/${data.google_project.agent_project.project_id}/agent:import --data '{ \"agentContent\": \"${filebase64(local.zip_filename)}\"}'"
   }
-  depends_on = [google_dialogflow_agent.full_agent]
+  depends_on = [google_dialogflow_agent.full_agent, template_dir.bot_dir]
 }

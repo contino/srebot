@@ -36,7 +36,7 @@
   },
   "defaultTimezone": "America/Chicago",
   "webhook": {
-    "url": "https://us-central1-bhood-214523.cloudfunctions.net/dialogflowFirebaseFulfillment",
+    "url": "${webhook_url}",
     "username": "",
     "headers": {
       "": ""

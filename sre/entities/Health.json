@@ -1,9 +1,0 @@
-{
-  "id": "6c8cb627-c64c-462b-b52a-9cae2aa4d3b3",
-  "name": "Health",
-  "isOverridable": true,
-  "isEnum": false,
-  "isRegexp": false,
-  "automatedExpansion": false,
-  "allowFuzzyExtraction": false
-}
