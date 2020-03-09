@@ -7,13 +7,35 @@
     {
       "resetContexts": false,
       "affectedContexts": [],
-      "parameters": [],
+      "parameters": [
+        {
+          "id": "07d27410-2b38-4dc5-830c-f5027ec7c4d3",
+          "required": true,
+          "dataType": "@sys.date-time",
+          "name": "date-time",
+          "value": "$date-time",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "When"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
       "messages": [
         {
           "type": 0,
           "lang": "en",
           "condition": "",
-          "speech": []
+          "speech": [
+            "srebot is always on call",
+            "It\u0027s me"
+          ]
         }
       ],
       "defaultResponsePlatforms": {},

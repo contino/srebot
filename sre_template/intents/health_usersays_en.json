@@ -1,18 +1,25 @@
 [
   {
-    "id": "1c2438e8-6020-4abb-b40d-cd31421c1428",
+    "id": "b871e352-5e38-4690-9c24-ccdc6aee5bb5",
     "data": [
       {
-        "text": "Is ",
+        "text": "what is the status of ",
         "userDefined": false
       },
       {
-        "text": "kafka",
-        "meta": "@sys.ignore",
+        "text": "cassandra",
+        "alias": "service",
+        "meta": "@service",
         "userDefined": false
       },
       {
-        "text": " up",
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "qa",
+        "alias": "environment",
+        "meta": "@environment",
         "userDefined": false
       }
     ],
@@ -21,16 +28,82 @@
     "updated": 0
   },
   {
-    "id": "3ebfebe9-4b14-478a-955e-c6b14977539e",
+    "id": "b2004200-26ac-4bfd-9a11-d57cce8240f3",
+    "data": [
+      {
+        "text": "what is the health of ",
+        "userDefined": false
+      },
+      {
+        "text": "kafka",
+        "alias": "service",
+        "meta": "@service",
+        "userDefined": false
+      },
+      {
+        "text": " in ",
+        "userDefined": false
+      },
+      {
+        "text": "prod",
+        "alias": "environment",
+        "meta": "@environment",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "add702cd-8fc2-4246-9b1f-f1a142ab8ede",
     "data": [
       {
         "text": "Is ",
         "userDefined": false
       },
       {
-        "text": "myapp down",
-        "alias": "health",
-        "meta": "@Health",
+        "text": "kafka",
+        "alias": "service",
+        "meta": "@service",
+        "userDefined": true
+      },
+      {
+        "text": " up for ",
+        "userDefined": false
+      },
+      {
+        "text": "prod",
+        "alias": "environment",
+        "meta": "@environment",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5d13e2f3-e583-489e-9bef-2e3b84cd9727",
+    "data": [
+      {
+        "text": "Is ",
+        "userDefined": false
+      },
+      {
+        "text": "kafka",
+        "alias": "service",
+        "meta": "@service",
+        "userDefined": true
+      },
+      {
+        "text": " down for ",
+        "userDefined": false
+      },
+      {
+        "text": "dev",
+        "alias": "environment",
+        "meta": "@environment",
         "userDefined": true
       },
       {

@@ -2,32 +2,43 @@
   "id": "5336d8a9-3744-4b41-bae9-fe01210082b3",
   "name": "error.rate",
   "auto": true,
-  "contexts": [
-    "environment",
-    "service"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "affectedContexts": [
+      "affectedContexts": [],
+      "parameters": [
         {
-          "name": "environment",
-          "parameters": {},
-          "lifespan": 5
+          "id": "1ac790c5-0a7f-4ed3-ac73-76f8eadc3bcb",
+          "required": false,
+          "dataType": "@service",
+          "name": "service",
+          "value": "$service",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
-          "name": "service",
-          "parameters": {},
-          "lifespan": 5
+          "id": "a2d764de-c225-433c-928a-f4a4cbb9bb65",
+          "required": false,
+          "dataType": "@environment",
+          "name": "environment",
+          "value": "$environment",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
-      "parameters": [],
       "messages": [
         {
           "type": 0,
           "lang": "en",
           "condition": "",
-          "speech": []
+          "speech": "Error rate info for $service in $environment"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -36,7 +47,7 @@
   ],
   "priority": 500000,
   "webhookUsed": true,
-  "webhookForSlotFilling": true,
+  "webhookForSlotFilling": false,
   "fallbackIntent": false,
   "events": [],
   "conditionalResponses": [],

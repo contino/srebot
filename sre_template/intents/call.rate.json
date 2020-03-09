@@ -2,32 +2,43 @@
   "id": "401b2bcc-782d-4340-91eb-b61d8d30ee80",
   "name": "call.rate",
   "auto": true,
-  "contexts": [
-    "environment",
-    "service"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "affectedContexts": [
+      "affectedContexts": [],
+      "parameters": [
         {
-          "name": "environment",
-          "parameters": {},
-          "lifespan": 5
+          "id": "f81095a7-98c8-4ea5-85e7-f1e96f2640e7",
+          "required": false,
+          "dataType": "@service",
+          "name": "service",
+          "value": "$service",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
-          "name": "service",
-          "parameters": {},
-          "lifespan": 5
+          "id": "5887a9cf-74d4-4bbf-8fcb-a85f795971c2",
+          "required": false,
+          "dataType": "@environment",
+          "name": "environment",
+          "value": "$environment",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
-      "parameters": [],
       "messages": [
         {
           "type": 0,
           "lang": "en",
           "condition": "",
-          "speech": []
+          "speech": "Call rate info for $service in $environment"
         }
       ],
       "defaultResponsePlatforms": {},

@@ -2,26 +2,40 @@
   "id": "382b213a-ea0e-44b2-8edf-921edff009cd",
   "name": "deployments",
   "auto": true,
-  "contexts": [
-    "environment"
-  ],
+  "contexts": [],
   "responses": [
     {
-      "resetContexts": false,
+      "resetContexts": true,
       "affectedContexts": [
         {
           "name": "environment",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "what",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "show",
           "parameters": {},
           "lifespan": 5
         }
       ],
       "parameters": [
         {
-          "id": "2eb63d7d-d18d-47b0-a6ba-9cf5100e0791",
-          "required": false,
-          "dataType": "@action",
-          "name": "action",
-          "value": "$action",
+          "id": "8a65a9a3-7aab-4126-9d5c-450238d4d1cf",
+          "required": true,
+          "dataType": "@sys.date-time",
+          "name": "date-time",
+          "value": "$date-time",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Deployments for when?"
+            }
+          ],
           "promptMessages": [],
           "noMatchPromptMessages": [],
           "noInputPromptMessages": [],
@@ -29,7 +43,14 @@
           "isList": false
         }
       ],
-      "messages": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": "deployements info for $date-time"
+        }
+      ],
       "defaultResponsePlatforms": {},
       "speech": []
     }

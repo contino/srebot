@@ -1,14 +1,69 @@
 [
   {
-    "id": "06ca4a46-7a10-45fd-a07a-2220137d0138",
+    "id": "11860cdc-5b72-4cfa-abd2-b7a3c9b49dc2",
     "data": [
       {
-        "text": "show me ",
+        "text": "what ",
         "userDefined": false
       },
       {
-        "text": "scheduled",
+        "text": "deployements",
         "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " have happened ",
+        "userDefined": false
+      },
+      {
+        "text": "today",
+        "alias": "date-time",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "27103b53-3129-4698-958b-fe8d8444867a",
+    "data": [
+      {
+        "text": "show me the ",
+        "userDefined": false
+      },
+      {
+        "text": "deployments",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " for ",
+        "userDefined": false
+      },
+      {
+        "text": "tomorrow",
+        "alias": "date-time",
+        "meta": "@sys.date-time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "509de98a-4e1b-45b6-9b07-e1c845749342",
+    "data": [
+      {
+        "text": "show me all the ",
+        "userDefined": false
+      },
+      {
+        "text": "current",
+        "alias": "date-time",
+        "meta": "@sys.date-time",
         "userDefined": true
       },
       {
@@ -17,9 +72,8 @@
       },
       {
         "text": "deployments",
-        "alias": "action",
-        "meta": "@action",
-        "userDefined": true
+        "meta": "@sys.ignore",
+        "userDefined": false
       }
     ],
     "isTemplate": false,
@@ -27,7 +81,7 @@
     "updated": 0
   },
   {
-    "id": "d7f40e1c-c3f1-4f64-8384-8fa47a883e49",
+    "id": "4bc33bed-b43d-4451-81c6-bda003d9d02b",
     "data": [
       {
         "text": "are there any scheduled ",
@@ -35,8 +89,7 @@
       },
       {
         "text": "deployments",
-        "alias": "action",
-        "meta": "@action",
+        "meta": "@sys.ignore",
         "userDefined": true
       },
       {

@@ -1,37 +1,25 @@
 [
   {
-    "id": "25083c29-11f5-4054-9188-df58552b2196",
+    "id": "57208405-842f-425e-81f7-55b908121728",
     "data": [
       {
-        "text": "show me the ",
+        "text": "What is the call latency for ",
         "userDefined": false
       },
       {
         "text": "kafka",
         "alias": "service",
         "meta": "@service",
-        "userDefined": true
+        "userDefined": false
       },
       {
-        "text": " errors for ",
+        "text": " in ",
         "userDefined": false
       },
       {
         "text": "prod",
         "alias": "environment",
         "meta": "@environment",
-        "userDefined": true
-      }
-    ],
-    "isTemplate": false,
-    "count": 0,
-    "updated": 0
-  },
-  {
-    "id": "f5967bec-6c27-4ad2-b63a-19700602c546",
-    "data": [
-      {
-        "text": "show me the cassandra errors",
         "userDefined": false
       }
     ],

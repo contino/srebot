@@ -10,7 +10,7 @@
   "disableInteractionLogs": false,
   "disableStackdriverLogs": true,
   "googleAssistant": {
-    "googleAssistantCompatible": false,
+    "googleAssistantCompatible": true,
     "project": "",
     "welcomeIntentSignInRequired": false,
     "startIntents": [],
@@ -41,10 +41,10 @@
     "headers": {
       "": ""
     },
-    "available": false,
+    "available": true,
     "useForDomains": false,
-    "cloudFunctionsEnabled": false,
-    "cloudFunctionsInitialized": false
+    "cloudFunctionsEnabled": true,
+    "cloudFunctionsInitialized": true
   },
   "isPrivate": true,
   "customClassifierMode": "use.after",

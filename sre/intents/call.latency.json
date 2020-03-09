@@ -2,32 +2,43 @@
   "id": "4eb8b499-f7e5-4542-bfd7-71abd2c5ebb4",
   "name": "call.latency",
   "auto": true,
-  "contexts": [
-    "environment",
-    "service"
-  ],
+  "contexts": [],
   "responses": [
     {
-      "resetContexts": false,
-      "affectedContexts": [
+      "resetContexts": true,
+      "affectedContexts": [],
+      "parameters": [
         {
-          "name": "environment",
-          "parameters": {},
-          "lifespan": 5
+          "id": "1203f1b1-d811-4ad9-b2c6-4cb5c4719927",
+          "required": false,
+          "dataType": "@service",
+          "name": "service",
+          "value": "$service",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
-          "name": "service",
-          "parameters": {},
-          "lifespan": 5
+          "id": "aaff7093-d4c6-4b23-92ff-9cdde1288b87",
+          "required": false,
+          "dataType": "@environment",
+          "name": "environment",
+          "value": "$environment",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
-      "parameters": [],
       "messages": [
         {
           "type": 0,
           "lang": "en",
           "condition": "",
-          "speech": []
+          "speech": "call latency info for $service in $environment"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -35,7 +46,7 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": false,
+  "webhookUsed": true,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
   "events": [],

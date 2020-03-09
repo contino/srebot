@@ -1,10 +1,26 @@
 [
   {
-    "id": "ccb75aa7-ba59-4dfb-8653-f7c441aca32b",
+    "id": "25083c29-11f5-4054-9188-df58552b2196",
     "data": [
       {
-        "text": "show me the kafka errors",
+        "text": "show me the ",
         "userDefined": false
+      },
+      {
+        "text": "kafka",
+        "alias": "service",
+        "meta": "@service",
+        "userDefined": true
+      },
+      {
+        "text": " errors for ",
+        "userDefined": false
+      },
+      {
+        "text": "prod",
+        "alias": "environment",
+        "meta": "@environment",
+        "userDefined": true
       }
     ],
     "isTemplate": false,
@@ -12,7 +28,7 @@
     "updated": 0
   },
   {
-    "id": "d249883e-c0fc-47c6-b19a-74a2c4b295f1",
+    "id": "f5967bec-6c27-4ad2-b63a-19700602c546",
     "data": [
       {
         "text": "show me the cassandra errors",

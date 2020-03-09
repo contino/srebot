@@ -2,32 +2,43 @@
   "id": "0a7742d3-d45d-4466-b6cf-31120b4fd8ed",
   "name": "errors",
   "auto": true,
-  "contexts": [
-    "environment",
-    "service"
-  ],
+  "contexts": [],
   "responses": [
     {
       "resetContexts": false,
-      "affectedContexts": [
+      "affectedContexts": [],
+      "parameters": [
         {
-          "name": "environment",
-          "parameters": {},
-          "lifespan": 5
+          "id": "0e93e945-38cf-4077-b379-ac293499fc4a",
+          "required": false,
+          "dataType": "@service",
+          "name": "service",
+          "value": "$service",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         },
         {
-          "name": "service",
-          "parameters": {},
-          "lifespan": 5
+          "id": "c37a7142-1024-4d66-ab29-e56bca6bb47a",
+          "required": false,
+          "dataType": "@environment",
+          "name": "environment",
+          "value": "$environment",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
         }
       ],
-      "parameters": [],
       "messages": [
         {
           "type": 0,
           "lang": "en",
           "condition": "",
-          "speech": []
+          "speech": "Errors for $service in $environment"
         }
       ],
       "defaultResponsePlatforms": {},
@@ -35,7 +46,7 @@
     }
   ],
   "priority": 500000,
-  "webhookUsed": false,
+  "webhookUsed": true,
   "webhookForSlotFilling": false,
   "fallbackIntent": false,
   "events": [],
