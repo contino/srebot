@@ -74,16 +74,12 @@ resource "google_dialogflow_agent" "full_agent" {
   supported_language_codes = ["fr","es"]
   time_zone = "America/Chicago"
   description = var.description
-  avatar_uri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"
+  avatar_uri = var.bot_avatar_uri
   enable_logging = true
-  match_mode = "MATCH_MODE_ML_ONLY"
-  classification_threshold = 0.3
-  api_version = "API_VERSION_V2_BETA_1"
-  tier = "TIER_STANDARD"
-  #match_mode = "MATCH_MODE_HYBRID"
-  #classification_threshold = 0.7
-  #api_version = "API_VERSION_V2"
-  #tier = "TIER_ENTERPRISE"
+  match_mode = var.bot_match_mode
+  classification_threshold = var.bot_classification_threshold
+  api_version = var.bot_api_version
+  tier = ar.bot_tier
   depends_on = [google_project_iam_member.agent_create]
 }
 
