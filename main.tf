@@ -14,7 +14,7 @@ resource "google_storage_bucket" "cf_bucket" {
 
 data "archive_file" "zip" {
   type        = "zip"
-  source_dir = "../${path.module}/${var.source_dir}/"
+  source_dir = "../${path.module}/fulfillment/"
   output_path = "${path.module}/files/index.zip"
 }
 
@@ -27,15 +27,15 @@ resource "google_storage_bucket_object" "cf_archive" {
 resource "google_cloudfunctions_function" "cloud_function" {
   name                  = var.bot_name
   description           = var.description
-  runtime               = var.runtime
+  runtime               = var.cf_runtime
   project               = data.google_project.agent_project.project_id
-  available_memory_mb   = var.memory_size_mb
+  available_memory_mb   = var.cf_memory_size_mb
   source_archive_bucket = google_storage_bucket.cf_bucket.name
   source_archive_object = google_storage_bucket_object.archive.name
   trigger_http          = true
-  timeout               = var.timeout
-  entry_point           = var.entry_point
-  region                = var.location
+  timeout               = var.cf_timeout
+  entry_point           = var.cf_entry_point
+  region                = var.cf_location
 }
 
 resource "google_cloudfunctions_function_iam_member" "invoker" {
@@ -73,7 +73,7 @@ resource "google_dialogflow_agent" "full_agent" {
   default_language_code = "en"
   supported_language_codes = ["fr","es"]
   time_zone = "America/Chicago"
-  description = "This is the ${var.bot_name} chat bot."
+  description = var.description
   avatar_uri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"
   enable_logging = true
   match_mode = "MATCH_MODE_ML_ONLY"
