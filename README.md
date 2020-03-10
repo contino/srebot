@@ -3,11 +3,27 @@ SRE bot uses terraform to deploy GCP DialogFlow bot for Site Reliability Enginee
 
 ## Pre-requisites for deploying from local machine
 * Install terraform locally.
+* Install GCP SDK (gcloud) locally.
 * Create an GCP account and project. 
 * https://dialogflow.cloud.google.com/ login and enable
 * Setup authentication to your GCP account in account.json (don't check this in)
 * export GOOGLE_APPLICATION_CREDENTIALS=account.json
 * update your project and bot_name in in variables.tf
+
+## Intents
+* alerts (service,environment)
+* call.latency (service,environment)
+* call.rate (service,environment)
+* error.rate (service,environment)
+* errors (service,environment)
+* health (service,environment)
+* deployments (datetime)
+* oncall (datetime)
+* help
+
+## Entities
+* environmen e.g. dev, int, qa, prodt
+* service e.g.  kafka, cassandra, orders, batch, purchases
 
 ## Instructions for deploying from local machine
 ```
