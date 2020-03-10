@@ -1,6 +1,6 @@
 [
   {
-    "id": "13a5bee2-c4c2-4093-a33c-67def28d9b42",
+    "id": "78593b03-f62f-452c-bdfe-3fc68c6c5cdd",
     "data": [
       {
         "text": "man",
@@ -12,12 +12,11 @@
     "updated": 0
   },
   {
-    "id": "7c38ecf0-5467-47e1-9eee-4bbad2261550",
+    "id": "b000baa0-a14f-4879-b862-8005390420b4",
     "data": [
       {
         "text": "help",
-        "alias": "action",
-        "meta": "@action",
+        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -26,7 +25,7 @@
     "updated": 0
   },
   {
-    "id": "eeb21995-b450-4fcd-a990-86edb200b876",
+    "id": "35619f54-c0d7-477e-8bc6-8fef506bc185",
     "data": [
       {
         "text": "info",
@@ -38,7 +37,7 @@
     "updated": 0
   },
   {
-    "id": "41e6c782-4fb9-47a6-a328-e46e7eeccba4",
+    "id": "1be846a2-c6f7-4540-95eb-26500deacc9f",
     "data": [
       {
         "text": "can you ",
@@ -46,8 +45,7 @@
       },
       {
         "text": "give",
-        "alias": "action",
-        "meta": "@action",
+        "meta": "@sys.ignore",
         "userDefined": true
       },
       {
@@ -65,12 +63,11 @@
     "updated": 0
   },
   {
-    "id": "44be2874-f3b8-4dae-ba1a-61f055c91892",
+    "id": "eccf4d8c-eeef-4b3a-ba46-215fc280e459",
     "data": [
       {
         "text": "describe",
-        "alias": "action",
-        "meta": "@action",
+        "meta": "@sys.ignore",
         "userDefined": true
       },
       {
@@ -88,7 +85,7 @@
     "updated": 0
   },
   {
-    "id": "04c1ca84-b7ce-4506-a9aa-ab220e3e1167",
+    "id": "5be5ea35-f512-4f2f-824b-d8d024081e26",
     "data": [
       {
         "text": "what can you ",
@@ -96,8 +93,7 @@
       },
       {
         "text": "do",
-        "alias": "action",
-        "meta": "@action",
+        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],
@@ -106,7 +102,7 @@
     "updated": 0
   },
   {
-    "id": "98110407-9731-4312-8bbb-006424a446f2",
+    "id": "3b440a2a-04d9-44dd-9655-f39e24a65abf",
     "data": [
       {
         "text": "how do you ",
@@ -114,8 +110,7 @@
       },
       {
         "text": "work",
-        "alias": "action",
-        "meta": "@action",
+        "meta": "@sys.ignore",
         "userDefined": true
       }
     ],

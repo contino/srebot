@@ -1,9 +1,0 @@
-{
-  "id": "4b473f6b-0dbf-4a95-9674-df38b4cc3e58",
-  "name": "action",
-  "isOverridable": true,
-  "isEnum": false,
-  "isRegexp": false,
-  "automatedExpansion": false,
-  "allowFuzzyExtraction": false
-}

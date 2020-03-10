@@ -15,7 +15,7 @@ resource "google_storage_bucket" "cf_bucket" {
 data "archive_file" "zip" {
   type        = "zip"
   source_dir = "${path.module}/fulfillment/"
-  output_path = "${path.module}/files/index.zip"
+  output_path = "${path.module}/index.zip"
 }
 
 resource "google_storage_bucket_object" "cf_archive" {

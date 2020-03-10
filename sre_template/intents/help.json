@@ -7,20 +7,7 @@
     {
       "resetContexts": false,
       "affectedContexts": [],
-      "parameters": [
-        {
-          "id": "7df01ffe-16e6-478b-b3d7-91e1ff0a4886",
-          "required": false,
-          "dataType": "@action",
-          "name": "action",
-          "value": "$action",
-          "promptMessages": [],
-          "noMatchPromptMessages": [],
-          "noInputPromptMessages": [],
-          "outputDialogContexts": [],
-          "isList": false
-        }
-      ],
+      "parameters": [],
       "messages": [
         {
           "type": 0,
